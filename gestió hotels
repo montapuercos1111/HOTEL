@@ -1,3 +1,9 @@
 CREATE DATABASE Gestio_Hotel;
 
 USE Gestio_Hotel;
+
+CREATE TABLE clientes_reservas (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nom VARCHAR(100) NOT NULL,
+    edat INT NOT NULL,
+    es_amfitrio BOOLEAN NOT NULL DEFAULT FALSE
