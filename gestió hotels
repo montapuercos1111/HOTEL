@@ -1,1 +1,3 @@
-hola 
+-- Crear la base de dades
+CREATE DATABASE Gestió d'un hotel;
+
