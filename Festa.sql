@@ -1,5 +1,5 @@
 -- Crear la base de dades
-CREATE DATABASE Festa;
+CREATE DATABASE Hotel;
 
 -- Utilitzar la base de dades creada
 USE Festa;
