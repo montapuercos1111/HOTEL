@@ -9,3 +9,19 @@ CREATE TABLE clientes_reservas (
     fecha_de_registro
     es_amfitrio BOOLEAN NOT NULL DEFAULT FALSE
 );
+
+
+
+CREATE TABLE limpieza (
+    id_empleado INT
+    estado VARCHAR(255) NOT NULL,
+    hora TIME NOT NULL,
+    num_habitación NOT NULL,
+);
+CREATE TABLE platos (
+    id_plato PRIMARY KEY,
+    nombre_del_plato VARCHAR(100) NOT NULL,
+    descripción VARCHAR(100) NOT NULL,
+    ingredientes
+    precio
+);
