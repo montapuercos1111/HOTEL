@@ -56,4 +56,12 @@ CREATE TABLE transportador (
  Notas_adicionales varchar (100) NOT NULL
 );
 
+CREATE TABLE herramientas (
+   id INT AUTO_INCREMENT PRIMARY KEY,
+   fecha_de_rotura DATA NOT NULL,
+   tipos_de_ mantenimiento  varchar (100) NOT NULL,
+   Descripcion_del_ Trabajo varchar (150) NOT NULL,
+   Estado varchar (100) NOT NULL,
+   Tiempo_Empleado TIME NOT NULL
+);
 
