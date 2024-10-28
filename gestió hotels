@@ -21,7 +21,7 @@ CREATE TABLE limpieza (
 CREATE TABLE platos (
     id_plato VARCHAR(100) PRIMARY KEY,
     nombre_del_plato VARCHAR(100) NOT NULL,
-    descripción VARCHAR(130) NOT NULL,
+    descripcion VARCHAR(130) NOT NULL,
     ingredientes VARCHAR(100) NOT NULL,
     precio DECIMAL NOT NULL,
 );
