@@ -23,5 +23,5 @@ CREATE TABLE platos (
     nombre_del_plato VARCHAR(100) NOT NULL,
     descripción VARCHAR(130) NOT NULL,
     ingredientes VARCHAR(100) NOT NULL,
-    precio INT NOT NULL,
+    precio DECIMAL NOT NULL,
 );
