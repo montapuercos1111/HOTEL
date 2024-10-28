@@ -4,12 +4,20 @@ USE Gestio_Hotel;
 
 CREATE TABLE clientes_reservas (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    nom VARCHAR(100) NOT NULL,
+    nombre VARCHAR(100) NOT NULL,
     correo VARCHAR(100) NOT NULL,
-    fecha_de_registro
-    es_amfitrio BOOLEAN NOT NULL DEFAULT FALSE
+    fecha_de_registro DATA NOT NULL,
+    direccion VARCHAR(100) NULL,
+    FOREIGN KEY (cliente_dni) REFERENCES clientes(dni)
 );
 
+CREATE TABLE habitaciones (
+
+id_habitacion INT AUTO_INCREMENT PRIMARY KEY,
+    disponibilidad TINYINT NOT NULL,
+    descripcion VARCHAR(255) NOT NULL,
+    precio_habitacion REAL NOT NULL,
+    
 
 
 CREATE TABLE limpieza (
