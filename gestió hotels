@@ -13,15 +13,15 @@ CREATE TABLE clientes_reservas (
 
 
 CREATE TABLE limpieza (
-    id_empleado INT
+    id_empleado VARCHAR(100) PRIMARY KEY,
     estado VARCHAR(255) NOT NULL,
     hora TIME NOT NULL,
-    num_habitación NOT NULL,
+    num_habitación INT AUTO_INCREMENT NOT NULL,
 );
 CREATE TABLE platos (
-    id_plato PRIMARY KEY,
+    id_plato VARCHAR(100) PRIMARY KEY,
     nombre_del_plato VARCHAR(100) NOT NULL,
-    descripción VARCHAR(100) NOT NULL,
-    ingredientes
-    precio
+    descripción VARCHAR(130) NOT NULL,
+    ingredientes VARCHAR(100) NOT NULL,
+    precio INT NOT NULL,
 );
