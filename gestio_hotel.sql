@@ -18,8 +18,6 @@ id_habitacion INT AUTO_INCREMENT PRIMARY KEY,
     descripcion VARCHAR(255) NOT NULL,
     precio_habitacion REAL NOT NULL,
     
-
-
 CREATE TABLE limpieza (
     id_empleado VARCHAR(100) PRIMARY KEY,
     estado VARCHAR(255) NOT NULL,
