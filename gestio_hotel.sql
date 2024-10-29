@@ -8,22 +8,26 @@ CREATE TABLE clientes_reservas (
     correo VARCHAR(100) NOT NULL,
     fecha_de_registro DATA NOT NULL,
     direccion VARCHAR(100) NULL,
-    FOREIGN KEY (cliente_dni) REFERENCES clientes(dni)
+    num_habitacion INT NOT NULL,
+    FOREIGN KEY (num_habitacion) REFERENCES habitaciones(num_habitacion)
 );
 
 CREATE TABLE habitaciones (
 
-id_habitacion INT AUTO_INCREMENT PRIMARY KEY,
+    num_habitacion INT AUTO_INCREMENT PRIMARY KEY,
     disponibilidad TINYINT NOT NULL,
     descripcion VARCHAR(255) NOT NULL,
     precio_habitacion REAL NOT NULL,
-    
+    );
+
 CREATE TABLE limpieza (
     id_empleado VARCHAR(100) PRIMARY KEY,
     estado VARCHAR(255) NOT NULL,
     hora TIME NOT NULL,
     num_habitación INT AUTO_INCREMENT NOT NULL,
+ FOREIGN KEY (num_habitacion) REFERENCES habitaciones(num_habitacion)
 );
+
 CREATE TABLE platos (
     id_plato VARCHAR(100) PRIMARY KEY,
     nombre_del_plato VARCHAR(100) NOT NULL,
@@ -49,10 +53,10 @@ CREATE TABLE consumiciones (
 
 CREATE TABLE transportador (
    id INT AUTO_INCREMENT PRIMARY KEY,
-   tipo_transporte varchar (50) NOT NULL,
    Capacidad  INT NOT NULL,
  Notas_adicionales varchar (100) NOT NULL
 );
+
 
 CREATE TABLE herramientas (
    id INT AUTO_INCREMENT PRIMARY KEY,
