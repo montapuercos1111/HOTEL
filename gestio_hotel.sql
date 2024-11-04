@@ -18,6 +18,7 @@ CREATE TABLE habitaciones (
     disponibilidad TINYINT NOT NULL,
     descripcion VARCHAR(255) NOT NULL,
     precio_habitacion REAL NOT NULL,
+    Tipo_de_habitación VARCHAR(50)
     );
 
 CREATE TABLE limpieza (
