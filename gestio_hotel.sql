@@ -67,7 +67,6 @@ CREATE TABLE transportador (
    Capacidad  INT NOT NULL,
  Notas_adicionales varchar (100) NOT NULL
     ingredientes VARCHAR (100) NOT NULL
-);
 FOREIGN KEY (ingredientes) REFERENCES ingredientes (codigo_ingredientes)
 );
 
