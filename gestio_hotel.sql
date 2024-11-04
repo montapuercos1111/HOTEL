@@ -36,12 +36,22 @@ CREATE TABLE platos (
     precio DECIMAL NOT NULL,
 );
 
+CREATE TABLE ingredientes (
+codigo_ingrediente AUTO_INCREMENT PRIMARY KEY,
+   Ingredientes VARCHAR (100) NOT NULL,
+   descripcion VARCHAR (100)  NULL
+ FOREIGN KEY (ingredientes) REFERENCES palatos(id_plato)
+);
+
+
 CREATE TABLE restaurante (
    id INT AUTO_INCREMENT PRIMARY KEY,
    hora TIME NOT NULL,
    precios float NOT NULL,
    num_habitacion INT NULL
+    Platos VARCHAR (100) 
    desayuno_comida_cena varchar (10) NOT NULL
+ FOREIGN KEY (Platos) REFERENCES paltos(id_plato)
 );
 
 CREATE TABLE consumiciones (
@@ -55,6 +65,9 @@ CREATE TABLE transportador (
    id INT AUTO_INCREMENT PRIMARY KEY,
    Capacidad  INT NOT NULL,
  Notas_adicionales varchar (100) NOT NULL
+    ingredientes VARCHAR (100) NOT NULL
+);
+FOREIGN KEY (ingredientes) REFERENCES ingredientes (codigo_ingredientes)
 );
 
 
