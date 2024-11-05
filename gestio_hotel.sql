@@ -6,7 +6,7 @@ CREATE TABLE clientes_reservas (
     id INT AUTO_INCREMENT PRIMARY KEY,
     nombre VARCHAR(100) NOT NULL,
     correo VARCHAR(100) NOT NULL,
-    fecha_de_registro DATA NOT NULL,
+    fecha_de_registro TIME NOT NULL,
     direccion VARCHAR(100) NULL,
     num_habitacion INT NOT NULL,
     FOREIGN KEY (num_habitacion) REFERENCES habitaciones(num_habitacion)
@@ -25,8 +25,8 @@ CREATE TABLE limpieza (
     id_empleado VARCHAR(100) PRIMARY KEY,
     estado VARCHAR(255) NOT NULL,
     hora TIME NOT NULL,
-    num_habitación INT AUTO_INCREMENT NOT NULL,
-    instrumentos VARCHAR (100) NOT NULL
+    num_habitacion INT AUTO_INCREMENT NOT NULL,
+    instrumentos VARCHAR (100) NOT NULL,
  FOREIGN KEY (num_habitacion) REFERENCES habitaciones(num_habitacion)
 );
 
@@ -35,11 +35,11 @@ CREATE TABLE platos (
     nombre_del_plato VARCHAR(100) NOT NULL,
     descripcion VARCHAR(130) NOT NULL,
     ingredientes VARCHAR(100) NOT NULL,
-    precio DECIMAL NOT NULL,
+    precio DECIMAL NOT NULL
 );
 
 CREATE TABLE ingredientes (
-codigo_ingrediente AUTO_INCREMENT PRIMARY KEY,
+codigo_ingrediente INT AUTO_INCREMENT PRIMARY KEY,
    Ingredientes VARCHAR (100) NOT NULL,
    descripcion VARCHAR (100)  NULL,
  tipo_ingrediente VARCHAR(50)  NOT NULL,
@@ -63,23 +63,23 @@ CREATE TABLE consumiciones (
    habitacion INT NULL,
    precios float NOT NULL,
    pedido varchar (50) NOT NULL,
-   nombre_cliente (50) NULL,
+   nombre_cliente varchar (50) NULL
 );
 
 CREATE TABLE transportador (
    id INT AUTO_INCREMENT PRIMARY KEY,
    Capacidad  INT NOT NULL,
-    Notas_adicionales varchar (100) NOT NULL
-    ingredientes VARCHAR (100) NOT NULL
-    empleado VARCHAR (50) NOT NULL
+    Notas_adicionales varchar (100) NOT NULL,
+    ingredientes VARCHAR (100) NOT NULL,
+    empleado VARCHAR (50) NOT NULL,
 FOREIGN KEY (ingredientes) REFERENCES ingredientes (codigo_ingredientes)
 );
 
 CREATE TABLE herramientas (
    id INT AUTO_INCREMENT PRIMARY KEY,
-   fecha_de_rotura DATA NOT NULL,
-   tipos_de_ mantenimiento  varchar (100) NOT NULL,
-   Descripcion_del_ Trabajo varchar (150) NOT NULL,
+   fecha_de_rotura TIME NOT NULL,
+   tipos_de_mantenimiento  varchar (100) NOT NULL,
+   Descripcion_del_Trabajo varchar (150) NOT NULL,
    Estado varchar (100) NOT NULL,
    Tiempo_Empleado TIME NOT NULL
 );
