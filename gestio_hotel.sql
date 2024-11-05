@@ -75,7 +75,6 @@ CREATE TABLE transportador (
 FOREIGN KEY (ingredientes) REFERENCES ingredientes (codigo_ingredientes)
 );
 
-
 CREATE TABLE herramientas (
    id INT AUTO_INCREMENT PRIMARY KEY,
    fecha_de_rotura DATA NOT NULL,
