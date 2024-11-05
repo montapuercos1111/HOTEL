@@ -26,7 +26,7 @@ CREATE TABLE limpieza (
     estado VARCHAR(255) NOT NULL,
     hora TIME NOT NULL,
     num_habitación INT AUTO_INCREMENT NOT NULL,
-    instrumento VARCHAR (100) NOT NULL,
+    instrumentos VARCHAR (100)
  FOREIGN KEY (num_habitacion) REFERENCES habitaciones(num_habitacion)
 );
 
@@ -41,7 +41,9 @@ CREATE TABLE platos (
 CREATE TABLE ingredientes (
 codigo_ingrediente AUTO_INCREMENT PRIMARY KEY,
    Ingredientes VARCHAR (100) NOT NULL,
-   descripcion VARCHAR (100)  NULL
+   descripcion VARCHAR (100)  NULL,
+ tipo_ingrediente VARCHAR(50)  NOT NULL,
+    cantidad INT NOT NULL,
  FOREIGN KEY (ingredientes) REFERENCES palatos(id_plato)
 );
 
@@ -50,9 +52,9 @@ CREATE TABLE restaurante (
    id INT AUTO_INCREMENT PRIMARY KEY,
    hora TIME NOT NULL,
    precios float NOT NULL,
-   num_habitacion INT NULL
-    Platos VARCHAR (100) 
-   desayuno_comida_cena varchar (10) NOT NULL
+   num_habitacion INT NULL,
+    Platos VARCHAR (100) ,
+   desayuno_comida_cena varchar (10) NOT NULL,
  FOREIGN KEY (Platos) REFERENCES paltos(id_plato)
 );
 
@@ -60,14 +62,16 @@ CREATE TABLE consumiciones (
    id INT AUTO_INCREMENT PRIMARY KEY,
    habitacion INT NULL,
    precios float NOT NULL,
-   pedido varchar (50) NOT NULL
+   pedido varchar (50) NOT NULL,
+   nombre_cliente (50),
 );
 
 CREATE TABLE transportador (
    id INT AUTO_INCREMENT PRIMARY KEY,
    Capacidad  INT NOT NULL,
- Notas_adicionales varchar (100) NOT NULL
+    Notas_adicionales varchar (100) NOT NULL
     ingredientes VARCHAR (100) NOT NULL
+    empleado VARCHAR (50) NOT NULL
 FOREIGN KEY (ingredientes) REFERENCES ingredientes (codigo_ingredientes)
 );
 
@@ -80,4 +84,3 @@ CREATE TABLE herramientas (
    Estado varchar (100) NOT NULL,
    Tiempo_Empleado TIME NOT NULL
 );
-
