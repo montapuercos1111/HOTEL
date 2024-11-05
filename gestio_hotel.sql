@@ -18,7 +18,7 @@ CREATE TABLE habitaciones (
     disponibilidad TINYINT NOT NULL,
     descripcion VARCHAR(255) NOT NULL,
     precio_habitacion REAL NOT NULL,
-    Tipo_de_habitación VARCHAR(50)
+    Tipo_de_habitación VARCHAR(50) NOT NULL 
     );
 
 CREATE TABLE limpieza (
@@ -26,7 +26,7 @@ CREATE TABLE limpieza (
     estado VARCHAR(255) NOT NULL,
     hora TIME NOT NULL,
     num_habitación INT AUTO_INCREMENT NOT NULL,
-    instrumentos VARCHAR (100)
+    instrumentos VARCHAR (100) NOT NULL
  FOREIGN KEY (num_habitacion) REFERENCES habitaciones(num_habitacion)
 );
 
@@ -63,7 +63,7 @@ CREATE TABLE consumiciones (
    habitacion INT NULL,
    precios float NOT NULL,
    pedido varchar (50) NOT NULL,
-   nombre_cliente (50),
+   nombre_cliente (50) NULL,
 );
 
 CREATE TABLE transportador (
