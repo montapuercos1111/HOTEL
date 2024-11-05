@@ -26,6 +26,7 @@ CREATE TABLE limpieza (
     estado VARCHAR(255) NOT NULL,
     hora TIME NOT NULL,
     num_habitación INT AUTO_INCREMENT NOT NULL,
+    instrumento VARCHAR (100) NOT NULL,
  FOREIGN KEY (num_habitacion) REFERENCES habitaciones(num_habitacion)
 );
 
