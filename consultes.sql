@@ -1,29 +1,29 @@
 Consultes_clientes_reservas
 
-SELECT * FROM tu_tabla;
+SELECT * FROM clientes_reservas;
 
-SELECT * FROM tu_tabla
+SELECT * FROM  clientes_reservas
 WHERE id = 1;
 
 SELECT id, nombre 
-FROM tu_tabla
+FROM  clientes_reservas
 WHERE num_habitacion = 102;
 
-ALTER TABLE tu_tabla
+ALTER TABLE  clientes_reservas
 ADD fecha_nacimiento DATE;
 
-UPDATE tu_tabla
+UPDATE  clientes_reservas
 SET fecha_nacimiento = '1990-01-01';
 
-UPDATE tu_tabla
+UPDATE  clientes_reservas
 SET direccion = 'Nueva direccion actulizada'
 WHERE num_habitacion = 102;
 
-UPDATE tu_tabla
+UPDATE  clientes_reservas
 SET direccion = 'Adreça Nova', correo = 'nou.correu@example.com'
-WHERE num_habitacion = 102 AND nombre = 'Maraa Lopez';
+WHERE num_habitacion = 102 AND nombre = 'Maria Lopez';
 
-DELETE FROM tu_tabla
+DELETE FROM  clientes_reservas
 WHERE num_habitacion = 102 AND correo = 'maria.lopez@example.com';
 
 Consultes_habitaciones
